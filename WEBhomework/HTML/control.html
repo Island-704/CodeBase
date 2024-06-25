@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/control.css">
+    <link rel="icon" type="image/png" href="../IMAGE/A.png">
+    <title>专项调查中心</title>
+</head>
+<body>
+    <div id="ALL" style="display: none;">
+        <div id="universe"></div>
+        
+        <div id="choose">
+            <div id="ch1" class="ch" onclick="show1()">能量井<br><span style="font-size: 12px;">Project-01</div>
+            <div id="ch2" class="ch" onclick="show2()">聚焦发生器<br><span style="font-size: 12px;">Project-02</span></div>
+            <div id="ch3" class="ch" onclick="show3()">万星园<br><span style="font-size: 12px;">Project-03</span></div>
+            <div id="ch4" class="ch" onclick="show4()">静滞所<br><span style="font-size: 12px;">Project-04</span></div>
+        </div>
+        
+        <!-- 1 -->
+
+        <div id="board">
+            <div id="bod1" class="bods">
+                <div class="container">
+                    <img src="../IMAGE/21能量井.png">
+                    <div class="ppro">
+                        <div id="pro13" class="pro"></div>
+                        <div id="pro12" class="pro"></div>
+                        <div id="pro11" class="pro"></div>
+                    </div>
+                </div>
+                <div class="butbox">
+                    <div id="put1" class="put" onclick="cha1()">Research +1</div>
+                    <div id="con12" class="con">调查结语</div><div id="bod12" class="smallbods">The next age of us Terrans.An age when skies,for the first time,will know their masters.<br>泰拉人的下一个时代，是天空首次知晓它的主人的时代。</div>
+                    <div id="con11" class="con">调查线索</div><div id="bod11" class="smallbods">克里斯腾用它对准天空，而我们应该用它对准谁？</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2 -->
+        
+        <div id="board">
+            <div id="bod2" class="bods">
+                <div class="container">
+                    <img src="../IMAGE/22聚焦发生器.png">
+                    <div class="ppro">
+                        <div id="pro23" class="pro"></div>
+                        <div id="pro22" class="pro"></div>
+                        <div id="pro21" class="pro"></div>
+                    </div>
+                </div>
+                <div class="butbox">
+                    <div id="put2" class="put" onclick="cha2()">Research +1</div>
+                    <div id="con22" class="con">调查结语</div><div id="bod22" class="smallbods">The way to what is above the skies has been shown to us.<br>A way that is inevitably both perilous ans propitious.<br>通往天空之上的道路，一条注定危险又有利的道路，已经向我们指明了。</div>
+                    <div id="con21" class="con">调查线索</div><div id="bod21" class="smallbods">迈向群星的第一步，是征服天空，我们已经走在了这条道路上。</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 -->
+
+        <div id="board">
+            <div id="bod3" class="bods">
+                <div class="container">
+                    <img src="../IMAGE/23万星园.png">
+                    <div class="ppro">
+                        <div id="pro33" class="pro"></div>
+                        <div id="pro32" class="pro"></div>
+                        <div id="pro31" class="pro"></div>
+                    </div>
+                </div>
+                <div class="butbox">
+                    <div id="put3" class="put" onclick="cha3()">Research +1</div>
+                    <div id="con32" class="con">调查结语</div><div id="bod32" class="smallbods">Minds of our land need to be united,we Terrans need an unified voice.<br>这片大地上的思想需要团结，我们泰拉人需要一个统一的声音。</div>
+                    <div id="con31" class="con">调查线索</div><div id="bod31" class="smallbods">我们向往星星已有千万年，现在，是时候向他们伸出手了。</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4 -->
+
+        <div id="board">
+            <div id="bod4" class="bods">
+                <div class="container">
+                    <img src="../IMAGE/24静滞所.png">
+                    <div class="ppro">
+                        <div id="pro43" class="pro"></div>
+                        <div id="pro42" class="pro"></div>
+                        <div id="pro41" class="pro"></div>
+                    </div>
+                </div>
+                <div class="butbox">
+                    <div id="put4" class="put" onclick="cha4()">Research +1</div>
+                    <div id="con42" class="con">调查结语</div><div id="bod42" class="smallbods">One day in that age,all we wished for will be ours.<br>总有一天，在那个时代，我们所希望的一切都会实现。</div>
+                    <div id="con41" class="con">调查线索</div><div id="bod41" class="smallbods">我们终有一天会探明这座墓园的秘密，但或许到了那时，它已不再重要。</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--同index页面，末尾生效-->
+    <script src="../JS/control.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.3.2/web-animations.min.js"></script>
+</body>
+</html>

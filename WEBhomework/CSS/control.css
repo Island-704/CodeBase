@@ -1,0 +1,255 @@
+/*模板*/
+/*----------------------------------------------------------------*/
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-image: url("../IMAGE/反重力通道.png");
+    background-size: 106% 125%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+#ALL{
+    margin: 0 0 0 0 ;
+}
+
+/*----------------------------------------------------------------*/
+
+/* 设置粒子属性 */
+.stat0, .stat1, .stat2, .stat3 {
+    position: absolute;
+    opacity: 1;
+}
+
+.stat0 {
+    height: 1px;
+    width: 1px;
+}
+
+.stat1, .stat2, .stat3 {
+    border-radius: 50%;
+}
+
+.stat1 {
+    height: 2px;
+    width: 2px;
+}
+
+.stat2 {
+    height: 4px;
+    width: 4px;
+}
+
+.stat3 {
+    height: 3px;
+    width: 3px;
+}
+
+/* universe 设置为覆盖整个页面，并且在 z-index 层级较高 */
+#universe {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+/*-----------------------------------------------------------------*/
+
+.ch{
+    letter-spacing: 1px;
+    width: 180px;
+    font-weight: bold;
+    text-align: center;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    padding-top: 20px;
+    padding-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #000000;
+    border: 2px solid #000;
+    border-radius: 7px;
+    z-index: 100;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    left: 130px;
+    animation: fadeInn 1s forwards;
+}
+.ch:hover{
+    width: 190px !important;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); 
+}
+@keyframes fadeInn {
+    from{
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+#ch1{
+    top: 20%; 
+}
+#ch2{
+    top: 40%; 
+}
+#ch3{
+    top: 60%; 
+}
+#ch4{
+    top: 80%; 
+}
+
+/*---------------------------------------------------------------*/
+.container{
+    display: flex;
+}
+.bods{
+    position: absolute;
+    right: 38px;
+    top: 40px;
+    bottom: 40px;
+    opacity: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 900px;
+    border: 2px solid #000;
+    border-radius: 7px;
+    transition: all 0.3s ease;
+}
+.bods img{
+    margin-top: 30px;
+    width: 512px;
+    height: 288px;
+    margin-left: 100px;
+    border: 2px solid black;
+}
+/*进度条*/
+.pro{
+    width: 60px;
+    height: 80px;
+    background-color: rgb(255, 255, 255,0.3);
+    border: 2px solid #000;
+    border-radius: 7px;
+    transition: all 0.3s ease;
+}
+.ppro{
+    margin-top: 50px;
+    margin-left: 120px;
+}
+/*按钮*/
+
+.con{
+    width: 180px;
+    height: 70px;
+    margin-right: 80px;
+    background-color: rgb(255, 255, 255,0.3);
+    border: 2px solid #000;
+    border-radius: 7px;
+    float: right;
+    margin-top: 40px;
+    opacity: 0;
+    transition: all 0.3s ease;
+
+    text-align: center;
+    line-height: 70px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.put{
+    width: 180px;
+    height: 70px;
+    margin-right: 65px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 2px solid #000;
+    border-radius: 7px;
+    float: right;
+    margin-top: 40px;
+    transition: all 0.3s ease;
+
+    text-align: center;
+    line-height: 70px;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+.con:hover{
+    background-color: white;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); 
+}
+.put:hover{
+    background-color: #ffffff;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); 
+}
+
+.smallbods{
+    z-index: -10000;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 1200px;
+    border: 2px solid #000;
+    border-radius: 7px;
+    transition: all 0.3s ease;
+
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/*---------------------------------------------------*/
+
+#con11:active + #bod11{
+    z-index: 10000;
+    opacity: 1;
+    background-color: #ffffffe0;
+}
+#con12:active + #bod12{
+    z-index: 10000;
+    opacity: 1;
+    background-color: #ffffffe0;
+}
+
+#con21:active + #bod21{
+    z-index: 10000;
+    opacity: 1;
+    background-color: #ffffffe0;
+}
+#con22:active + #bod22{
+    z-index: 10000;
+    opacity: 1;
+    background-color: #ffffffe0;
+}
+#con31:active + #bod31{
+    z-index: 10000;
+    opacity: 1;
+    background-color: #ffffffe0;
+}
+#con32:active + #bod32{
+    z-index: 10000;
+    opacity: 1;
+    background-color: #ffffffe0;
+}
+#con41:active + #bod41{
+    z-index: 10000;
+    opacity: 1;
+    background-color: #ffffffe0;
+}
+#con42:active + #bod42{
+    z-index: 10000;
+    opacity: 1;
+    background-color: #ffffffe0;
+}

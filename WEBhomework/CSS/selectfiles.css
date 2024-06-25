@@ -1,0 +1,236 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans";
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.full-screen{
+    width:100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.full-screen video{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/*----------------------------------------------------------------------------------------*/
+
+/*圆弧*/
+.Circle {
+    width: 1500px;
+    height: 1500px;
+    border: 5px solid transparent; /* 添加边框 */
+    border-radius: 50%; /* 让元素呈现圆形 */
+    position: absolute;
+    top: 50%;
+    left: -53%;
+    transform: translateY(-50%);
+    /*圆弧出现动画*/
+    animation: drawRightBorder 2s linear forwards;
+}
+/*前两秒隐藏圆弧，并在后两秒出现*/
+@keyframes drawRightBorder {
+    0% { border-color: transparent; } /* 边框透明 */
+    80% { border-color: transparent; } /* 右侧边框透明 */
+    100% { border-color: #000; } /* 右侧边框逐渐绘制，边框完全显示 */
+}
+
+/*----------------------------------------------------------------------------------------*/
+
+/*引导字幕*/
+@keyframes blink {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+/* 应用闪烁动画到元素 */
+#temp {
+    font-size: 55px;
+    opacity: 0;
+    position: absolute;
+    /*居中*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: blink 0.2s ease-in-out 0.7s 4 alternate;
+}
+
+/*----------------------------------------------------------------------------------------*/
+
+/*选项*/
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* 开始状态：完全透明 */
+        transform: translateX(100%); /* 初始位置在屏幕右侧 */
+    }
+    100% {
+        opacity: 1; /* 结束状态：完全可见 */
+        transform: translateX(0%); /* 终止位置在屏幕左侧 */
+    }
+}
+
+.sele{
+    letter-spacing: 1px;
+    width: 200px;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0; /* 设置初始透明度为0，即隐藏 */
+    position: fixed;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #000000;
+    border: 2px solid #000;
+    z-index: 100;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-radius: 7px;
+}
+.sele:hover {
+    width: 230px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); 
+}
+
+#sele1{
+    top: 8%;
+    left: 70%;
+    animation: fadeIn 1s ease forwards; /* 使用动画让div慢慢从右往左浮现，持续1秒 */
+    animation-delay: 1.8s; /* 设置动画延迟 */
+}
+#sele2{
+    top: 26%;
+    left: 72%;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 2s;
+}
+#sele3{
+    top: 44%;
+    left: 74%;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 2.2s;
+}
+#sele4{
+    top: 62%;
+    left: 72%;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 2.4s;
+}
+#sele5{
+    top: 80%;
+    left: 70%;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 2.6s;
+    color: red;
+}
+
+/*-------------------------------------------------------------------*/
+
+/*终端板*/
+@keyframes fadeIn2 {
+    0% {
+        opacity: 0; 
+        transform: translateX(-60%); 
+    }
+    100% {
+        opacity: 1; 
+        transform: translateX(0%); 
+    }
+}
+
+.board{
+    width: 500px;
+    height: 400px;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    opacity: 0; /* 设置初始透明度为0，即隐藏 */
+    position: fixed;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.219);
+    color: #000000;
+    border: 2px solid #000;
+    top: 10%;
+    left: 10%;
+    z-index: -10;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    border-radius: 7px;
+}
+
+#bod1{
+    z-index: 10;
+}
+
+.ANIM{
+    animation: fadeIn2 1.5s ease forwards;
+    animation-delay: 2s;
+}
+.ANIM2{
+    animation: fadeIn2 1s ease forwards;
+}
+
+/*-----------------------------------------------------------------*/
+
+/*终端内容*/
+.content{
+    margin: 10px auto;
+    text-shadow: 2px 2px 3px rgba(66, 66, 66, 0.5);
+    letter-spacing: 3px;
+}
+.content img{
+    border: 3px solid #000;
+    height: 225px;
+    width: 400;
+    border-radius: 7px;
+}
+
+.board button{
+    margin: 10px auto;
+    letter-spacing: 3px;
+    font-size: 17px;
+    font-weight:600;
+    width: 150px;
+    height: 60px;
+    outline: none;
+    border: none;
+    color: #417136;
+    cursor: pointer;
+    background:rgb(255, 254, 224);
+    transition: .4s linear;
+    border: 2px solid #000;
+    border-radius: 7px;
+}
+.board button:hover{
+    background:rgb(210, 247, 160);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
+}
+
+#bod5 button{
+    color: rgb(255, 0, 0);
+    background: #000000;
+    transition: .4s linear;
+}
+#bod5 button::before{
+    content: "拒绝外来访问";
+}
+#bod5 button:hover{
+    color: rgb(255, 0, 0);
+    background: #ffffff;
+}
+#bod5 button:hover::before{
+    content: "尝试访问";
+}

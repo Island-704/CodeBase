@@ -1,0 +1,257 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans";
+    text-decoration: none;
+    overflow: hidden;
+
+}
+
+.full-screen{
+    width:100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.full-screen video{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -100;
+    /*调整不透明度，让滤镜生效*/
+    opacity: 1;
+}
+
+#DPX{
+    z-index: 1000;
+    margin-top: 540px;
+    background-color: rgb(255, 248, 228,0.7);
+    border: 2px solid #868686;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0;
+    letter-spacing: 2px;
+    padding: 20px 200px 20px 200px;
+    position: absolute;
+    animation: fadeIn 1.5s forwards, fadeOut 1.5s 4.2s forwards ;
+    /*裁剪*/
+    clip-path: polygon(4% 0%, 96% 0%, 100% 50%, 96% 100%, 4% 100%, 0% 50%);
+}
+@keyframes fadeIn {
+    0% { transform: translateX(-200%);opacity: 0; }
+    100% { transform: translateX(0%);opacity: 1; }
+}
+@keyframes fadeOut {
+    0% { transform: translateX(0%);opacity: 1; }
+    100% { transform: translateX(200%);opacity: 0; }
+}
+
+/*--------------------------------------------------------------------------------------*/
+
+#say1{
+    position: absolute;
+    top: 13%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+}
+#say2{
+    position: absolute;
+    top: 87%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+}
+
+.printer{
+    overflow: hidden;
+    text-align: center;
+    justify-content: center;
+    color: #ffffff;
+    border-right: 2px solid transparent;
+    font-size: 20px;
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+@keyframes grow1{
+    from{
+        width: 0;
+    }to{
+        width: 740px;
+    }
+}
+@keyframes grow2{
+    from{
+        width: 0;
+    }to{
+        width: 630px;
+    }
+}
+@keyframes blink{
+    from{
+        border-right-color: #ffffff;
+    }to{
+        border-right-color: #000000;
+    }
+}
+.panim1{
+    animation: grow1 4s steps(40) 1s normal both, 
+    blink 500ms steps(2) infinite normal;
+}
+.panim2{
+    animation: grow2 4s steps(40) 6s normal both, 
+    blink 500ms steps(2) 5s infinite normal;
+}
+
+/*--------------------------------------------------------------------------------------*/
+
+#card1{
+    /*入场渐变*/
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+#card1{
+    animation: cardfadeIn 4.5s forwards 5s;
+}
+@keyframes cardfadeIn {
+    0% { size: 0;opacity: 0; }
+    100% { size: 100%;opacity: 1; }
+}
+
+
+#card2{
+    z-index: 100;
+    width: 450px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    position: absolute; 
+    transform: translate(-50%, -50%);
+    transition: 0.5s;
+    border-radius: 20px;
+
+    opacity: 0.8;
+    background-image: url("../IMAGE/晚安.png"); 
+    background-size: cover; 
+    background-position: center ; 
+    
+}
+#card3{
+    z-index: 200;
+    width: 450px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    position: absolute; 
+    transform: translate(-50%, -50%);
+    transition: 0.5s;
+    border-radius: 20px;
+    
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.229);
+    text-align: center;
+}
+#card2:hover{
+    opacity: 0;
+}
+#card3:hover{
+    opacity: 1;
+}
+
+
+
+/*为了制作太空科技感需要设计一下字体*/
+.In{
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-align: center;
+    line-height: 60px;
+    outline: none;
+    /*自定义属性,网上学到的，能用来做发光*/
+    --c:rgb(112, 153, 242);
+    /*通过var函数调用*/
+    text-shadow: 0 0 10px var(--c),
+    0 0 20px var(--c),
+    0 0 40px var(--c),
+    0 0 80px var(--c),
+    0 0 140px var(--c);
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+
+
+.ipt{
+    height: 30px;
+    color: #ffffff;
+    background: none;
+    border: 2px solid #ffffff00;
+    border-radius: 5px;
+    border-bottom: 2px solid #ffffff;
+    transition: 0.5s;
+    padding: 5px 12px 6px;
+    font-size: 18px;
+    outline: none;
+    margin-top: 40px;
+    margin-right: 35px;
+}
+.ipt::placeholder {
+    color: #ffffffa4; 
+    font-weight: bold;
+    opacity: 1; 
+}
+.ipt:focus{
+    border: 2px solid #ffffff;
+}
+
+button{
+    cursor: pointer;
+    border-radius: 18px;
+    border: none;
+    background: linear-gradient(45deg, #3d6ca6, #382470);
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 22px;
+    letter-spacing: 1px;
+    width: 110px;
+    height: 50px;
+    transition: 0.5s;
+}
+button:hover{
+    color: #6acdff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选择文件</title>
+    <link rel="stylesheet" href="../CSS/selectfiles.css">
+    <script src="../JS/selectfiles.js"></script>
+    <link rel="icon" type="image/png" href="../IMAGE/A.png">
+</head>
+<body>
+<div id="ALL" style="display: none;">
+    <div class="full-screen">
+        <!--自动播放，静音-->
+        <video class="video" src="../IMAGE/载入.mp4" autoplay muted id="back"></video>
+    </div>
+    <div class="Circle"></div>
+    <div id="temp">SELECT</div>
+    
+    <div class="sele" id="sele1" onclick="change1()">BRIEF INTRODUCTION</div>
+    <div class="sele" id="sele2" onclick="change2()">DEPARTMENT</div>
+    <div class="sele" id="sele3" onclick="change3()">SCIENTIFIC RESEARCH</div>
+    <div class="sele" id="sele4" onclick="change4()">EXPERIMENT</div>
+    <div class="sele" id="sele5" onclick="change5()">UNKNOWN ERROR</div>
+    <div class="board ANIM" id="bod1">
+        <div class="content">莱茵生命简史</div>
+        <div class="content"><img src="../IMAGE/总部.png"></div>
+        <button id="bt1">查看</button>
+    </div>
+    <div class="board ANIM" id="bod2">
+        <div class="content">莱茵各大科室</div>
+        <div class="content"><img src="../IMAGE/科室.jpg"></div>
+        <button id="bt2">查看</button>
+    </div>
+    <div class="board ANIM" id="bod3">
+        <div class="content">主要研究方向</div>
+        <div class="content"><img src="../IMAGE/历史.png"></div>
+        <button id="bt3">查看</button>
+    </div>
+    <div class="board ANIM" id="bod4">
+        <div class="content">重要实验记录</div>
+        <div class="content"><img src="../IMAGE/实验.jpg"></div>
+        <button id="bt4">查看</button>
+    </div>
+    <div class="board ANIM" id="bod5">
+        <div class="content">？？？？？</div>
+        <div class="content"><img src="../IMAGE/孤星.png"></div>
+        <!--单独设置按钮-->
+        <button id="bt5"></button>
+    </div>
+
+</div>
+</body>
+</html>

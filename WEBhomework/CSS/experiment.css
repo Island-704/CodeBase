@@ -1,0 +1,55 @@
+/*模板*/
+/*----------------------------------------------------------------*/
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-image: url("../IMAGE/背景.png");
+    background-size: 106% 125%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+#ALL{
+    width: 1100px;
+    background-color: rgba(255, 255, 255, 0.63);
+    margin: 50px auto;
+    text-align: center;
+    padding: 20px;
+    animation: fadeIIn 0.7s ease-in-out forwards;
+    border-radius: 7px;
+}
+@keyframes fadeIIn {
+    from {opacity: 0; }
+    to {opacity: 1; }
+}
+.one{
+    position: relative;
+    margin: 15px 60px 30px 60px;
+}
+img{
+    border: 3px solid #000;
+    width: 650px;
+    margin-bottom: 50px;
+    border-radius: 7px;
+}
+.tte{
+    text-align: left;
+    font-size: 18px;
+}
+.tth{
+    font-size: 28px;
+    font-weight: bold;
+}
+p{
+    letter-spacing: 2px;
+    padding: 10px; 
+    line-height: 1.5; 
+}
+/*----------------------------------------------------------------*/
+.ocp{
+    height: 80px;
+}

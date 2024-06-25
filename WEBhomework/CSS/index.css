@@ -1,0 +1,175 @@
+*{
+    font-family: "Open Sans";
+}
+
+body {
+    background: linear-gradient(to right, rgb(57, 121, 20), rgb(255, 252, 220));
+    margin: 0;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+/* 设置背景图层叠元素 */
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../IMAGE/A.jpg);
+    background-size: cover; /* 确保背景图片完全覆盖 */
+    background-position: center; /* 将背景图片居中 */
+    opacity: 0.6; /* 设置背景图片不透明度 */
+    z-index: -1; /* 将背景图层叠在底部 */
+}
+
+
+/* 设置粒子属性 */
+.stat0, .stat1, .stat2, .stat3 {
+    position: absolute;
+    opacity: 1;
+}
+
+.stat0 {
+    height: 1px;
+    width: 1px;
+}
+
+.stat1, .stat2, .stat3 {
+    border-radius: 50%;
+}
+
+.stat1 {
+    height: 2px;
+    width: 2px;
+}
+
+.stat2 {
+    height: 4px;
+    width: 4px;
+}
+
+.stat3 {
+    height: 3px;
+    width: 3px;
+}
+
+/* universe 设置为覆盖整个页面，并且在 z-index 层级较高 */
+#universe {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    pointer-events: none;
+}
+
+/* login-box 设置为相对定位，并且 z-index 层级较低 */
+.login-box {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    background-color: #2d3e2568;
+    margin: 0px auto;
+    margin-top: 70px;
+    width:350px;
+    height: 400px;
+    border-radius: 7px;
+}
+
+.login-box h1{
+    padding-top: 25px;
+    color:rgb(255, 255, 255);
+    font-size: 45px;
+}
+
+.login-box .input-box input{
+    line-height: 25px;
+    border: none;
+    background:none;
+    border-bottom: white 2px solid;
+    padding: 5px 10px;
+    outline: none;
+    color: white;
+}
+
+ /* 设置占位符颜色 + 兼容性处理 */
+.login-box .input-box input::placeholder {
+    font-size: 16px;
+    color: rgba(210, 255, 162, 0.723);
+}
+.login-box .input-box input:-ms-input-placeholder {
+    color: rgba(210, 255, 162, 0.723);
+}
+
+.login-box button{
+    transition: .4s linear;
+    font-size: 17px;
+    margin-top: 30px;
+    width: 130px;
+    height: 50px;
+    outline: none;
+    border: none;
+    color: #417136;
+    background-image: linear-gradient(120deg, #c8e76a 0%,#daecd6 100%);
+    border-radius: 7px;
+}
+
+.login-box button:hover{
+    background-image: linear-gradient(120deg,#8efa75 0%,#dffc88 100%);
+}
+
+/* 注册按钮样式 */
+#span-register{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    font-weight: bold;
+    font-size: 25px; 
+    color:rgb(236, 255, 235);
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+#span-register:hover{
+    color:rgb(128, 255, 122);
+}
+
+#span-login{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    font-weight: bold;
+    font-size: 25px; 
+    color:rgb(236, 255, 235);
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+#span-login:hover{
+    color:rgb(128, 255, 122);
+}
+
+#abc{
+    color: #61913f;
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    top: 30px;
+    margin: 0 auto;
+}
+

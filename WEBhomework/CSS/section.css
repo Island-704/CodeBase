@@ -1,0 +1,134 @@
+/*模板*/
+/*----------------------------------------------------------------*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../IMAGE/背景.png");
+    background-size: 106% 125%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+#ALL{
+    width: 1100px;
+    background-color: rgba(255, 255, 255, 0.63);
+    margin: 50px auto;
+    text-align: center;
+    padding: 20px;
+    animation: fadeIIn 0.7s ease-in-out forwards;
+}
+@keyframes fadeIIn {
+    from {opacity: 0; }
+    to {opacity: 1; }
+}
+.one{
+    position: relative;
+    margin: 15px 60px 30px 60px;
+}
+img{
+    border: 3px solid #000;
+    width: 650px;
+    margin-bottom: 50px;
+}
+.tte{
+    text-align: left;
+    font-size: 18px;
+}
+.tth{
+    font-size: 28px;
+    font-weight: bold;
+}
+p{
+    letter-spacing: 2px;
+    padding: 0px; 
+    line-height: 1.5; 
+}
+/*----------------------------------------------------------------*/
+
+.ccc{
+    font-size: 28px;
+    font-weight: bold;
+}
+.container{
+    position: relative;
+    width:100%;
+    /*flex弹性布局也可以实现居中，跟top,left:50% 结合 transform: translate(-50%, -50%)一样 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 130px;
+    margin-bottom: 40px;
+}
+.occupy{
+    cursor: pointer;
+    height: 180px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.occupy .card{
+    position: absolute;
+    width: 120px;
+    height: 240px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 6px solid rgba(255, 255, 255, 0.36);
+    transition: 0.5s;
+    /*横纵比例定义旋转中心*/
+    transform-origin: 50% 100%;
+}
+.occupy:hover .card{
+    transform: rotate(calc(var(--i) * 4deg))
+    /*
+    rotate是旋转函数，deg是角度
+    利用前面html中定义的--i让每张卡片的旋转角度不同
+    也就是让卡片具有差异性
+    然后calc就计算最终角度
+    */
+    translate(calc(var(--i)*90px),-60px);
+    box-shadow: 0 15px 50px  rgb(0, 0, 0,0.25);
+}
+.occupy .card:active{
+    /*添加伪类单独控制卡片，交互常用*/
+    translate: calc(var(--i) * 5px)-20px;
+    z-index: 999;
+    scale: 1.1;
+}
+.occupy:active .card:not(:active){
+    opacity: 0.5;
+}
+
+.bbox{
+    margin:30px 50px 50px 30px;
+    display: flex;
+    align-items: center;
+}
+.bleft{
+    flex: 1;
+    margin-left: -30px;
+}
+.bright{
+    align-items: center;
+    margin-right: 30px;
+}
+.bright img{
+    flex: 1;
+    width: 200px;
+    height: auto;
+    margin-bottom: 0;
+}
+.ocp{
+    height: 80px;
+}
